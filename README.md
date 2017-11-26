@@ -13,9 +13,9 @@ npm install express body-parser --save
 This may be tricky and it is advised to follow instruction from this page: https://docs.mongodb.com/manual/administration/install-community/
 Don't forget to set up new destination folder while running this in cmd:
 
-mongod.exe --dbpath C:\MongoDataBase\data\db
-mongo.exe
-use exams (or change this name of a database in api.js file)
+mongod.exe --dbpath C:\MongoDataBase\data\db <br />
+mongo.exe <br />
+use exams (or change this name of a database in api.js file) 
 
 5. run 'npm install' in projeckt folder
 6. run 'ng build' in project folder
