@@ -1,0 +1,14 @@
+<div class="body">
+  <form class="codeForm" name="codeForm">
+    <div>Login:</div>
+    <mat-form-field>
+      <input matInput name="login" [(ngModel)]="login">
+    </mat-form-field>
+    <br>
+    <div>Password:</div>
+    <mat-form-field>
+      <input matInput type="password" name="password" [(ngModel)]="password">
+    </mat-form-field>
+  </form>
+  <button mat-raised-button color="primary" (click)="onLoginClick()">Login</button> 
+</div>

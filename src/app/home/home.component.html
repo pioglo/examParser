@@ -1,0 +1,83 @@
+<div class="body">
+  <button mat-button class="loginBtn" (click)="onLoginBtnClick()">Login</button>
+  <h1>
+    Exam tester
+  </h1>
+  <div class="exam">
+    <div class="row">
+      <div class="cardCode ">
+        Miejsce na karte kodową
+      </div>
+      <div class="idCard">
+        <div class="info">
+          <b>Wydział EAIiB</b> 03.02.2017<br>
+          Egzamin wstępny na studia II stopnia<br>
+          Kierunek: Informatyka<br>
+          Kod:<br>
+      </div>
+        <div class="code">
+          {{exam.examId}}
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin: 2px">
+      Karta odpowiedzi
+    </div>
+    <div class="row" style="margin: 2px">
+      do egzaminu kwalifikacyjnego na studia II stopnia (kierunek Informatyka)
+    </div>
+    <div class="row">
+      <div class="leftAnswears">
+          <table>
+            <thead>
+              <th></th>
+              <th>a</th>
+              <th>b</th>
+              <th>c</th>
+              <th>d</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let question of questionsLeft; let i = index">
+                <td>{{i+1}}</td>
+                <td><div [ngClass]="{'answearFalse': !question.answears[0], 'answearRight': question.answears[0]}"></div></td>
+                <td><div [ngClass]="{'answearFalse': !question.answears[1], 'answearRight': question.answears[1]}"></div></td>
+                <td><div [ngClass]="{'answearFalse': !question.answears[2], 'answearRight': question.answears[2]}"></div></td>
+                <td><div [ngClass]="{'answearFalse': !question.answears[3], 'answearRight': question.answears[3]}"></div></td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      <div class="rightAnswears">
+          <table>
+              <thead>
+                  <th></th>
+                  <th>a</th>
+                  <th>b</th>
+                  <th>c</th>
+                  <th>d</th>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let question of questionsRight; let i = index">
+                      <td>{{i+26}}</td>
+                      <td><div [ngClass]="{'answearFalse': !question.answears[0], 'answearRight': question.answears[0]}"></div></td>
+                      <td><div [ngClass]="{'answearFalse': !question.answears[1], 'answearRight': question.answears[1]}"></div></td>
+                      <td><div [ngClass]="{'answearFalse': !question.answears[2], 'answearRight': question.answears[2]}"></div></td>
+                      <td><div [ngClass]="{'answearFalse': !question.answears[3], 'answearRight': question.answears[3]}"></div></td>
+                    </tr>
+                 </tbody>
+          </table>
+      </div>
+    </div>
+    <div>
+      Liczba punktów .......... Ocena: .......... Data: .......... <br>
+      Podpis 1 .......... Podpis 2 ..........
+    </div>
+  </div>
+  <form class="codeForm" name="codeForm">
+    <mat-form-field>
+      <input matInput placeholder="Exam code number" name="examCode" [(ngModel)]="examId">
+    </mat-form-field>
+  </form>
+  <button *ngIf="exam.examId === '' " mat-raised-button color="primary" class="generatorBtn" (click)="onGenerateExamClick()">Generate exam</button> 
+  <button *ngIf="exam.examId !== '' " mat-raised-button color="primary" class="generatorBtn" (click)="onSendResultsClick()">Send results</button> 
+</div>

@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
+import { NgModel } from '@angular/forms';
+import { DataService } from './data.service';
+import { Exam, Question } from './classes';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+  constructor(private _dataService: DataService) {
+  }
+
 }

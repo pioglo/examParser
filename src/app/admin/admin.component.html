@@ -1,0 +1,16 @@
+<div class="body" *ngIf="_dataService.adminMode">
+    <h1>Administration panel</h1>
+    <button mat-raised-button color="primary" (click)="onSave()">Generate XML file</button> 
+    <table style="margin: 0 auto; margin-top: 20px; width: 40%" *ngIf="exams.length > 0">
+        <thead>
+            <th>Exams IDs</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let exam of exams">
+                <td>
+                    {{exam.examId}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
