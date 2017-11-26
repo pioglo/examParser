@@ -1,27 +1,25 @@
 # ExamParser
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
+Simple exam tester with administration module.
+Based on MEAN app structure.
 
-## Development server
+## First run:
+1. Download and install Node from  https://nodejs.org/en/ (my vesrison: v6.11.3)
+2. Install angular:
+npm install @angular/cli -g
+3. Install Express
+npm install express body-parser --save
+4. Install MongoDB from https://www.mongodb.com/  
+This may be tricky and it is advised to follow instruction from this page: https://docs.mongodb.com/manual/administration/install-community/
+Don't forget to set up new destination folder while running this in cmd:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+mongod.exe --dbpath C:\MongoDataBase\data\db
+mongo.exe
+use exams (or change this name of a database in api.js file)
 
-## Code scaffolding
+5. run 'npm install' in projeckt folder
+6. run 'ng build' in project folder
+7. run 'node server' in projeckt folder
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+For more control over database I recomend using https://robomongo.org/
