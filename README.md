@@ -24,3 +24,10 @@ use exams (or change this name of a database in server/routes/api.js file)
 ## Extra
 
 For more control over database I recomend using https://robomongo.org/
+
+## Panel administracyjny
+
+Basick administration panel with a main function of export all of the tests to a .xml file
+
+login: admin
+password: 1q2w3e4rY
